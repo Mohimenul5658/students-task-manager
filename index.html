@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+        <h1>Students Task Manager</h1>
+
+        <div class="date-time">
+            <div id="dateTime"></div>
+        </div>
+
+        <div class="task-form">
+            <form action="#">
+                <input type="text" id="title" placeholder="Task Name">
+                <input type="text" id="subject" placeholder="Subject">
+
+                <select name="Priority" id="priority">
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+
+                <button id="addTask">Add Task</button>
+            </form>
+        </div>
+
+        <div class="filters">
+                <button onclick="filterTasks('all')">All</button>
+
+                <button onclick="filterTasks('completed')">Completed</button>
+
+                <button onclick="filterTasks('pending')">Pending</button>
+        </div>
+
+        <div class="counter">
+
+            <p>Total Tasks :<span id="total">0</span></p>
+
+            <p>Completed :<span id="completed">0</span></p>
+
+            <p>Pending :<span id="pending">0</span></p>
+
+        </div>
+
+        <button id="darkMode">🌙Dark Mode</button>
+        <div id="taskList"></div>
+  </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
